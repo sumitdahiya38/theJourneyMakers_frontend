@@ -1,0 +1,150 @@
+.packageSection {
+    width: 100%;
+    background-color: #eaeef0;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.packageSectionTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packageStarCircle {
+    display: flex;
+    position: relative;
+    min-width: 48px;
+    min-height: 48px;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: white; */
+}
+
+.packageStarCircle img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.packageSectionHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 1.2rem;
+}
+
+.packageSectionHeading h2 {
+    max-width: 700px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.packageSectionHeading span {
+    color: #797979;
+}
+
+.packageTitle {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    /* background-color: #d3d8da; */
+    color: black;
+}
+
+.packageTitle p {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 13px;
+    padding: 13px 18px 13px 18px;
+}
+
+.packageCardsContainer {
+    /* background-color: #d3d8da; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+  
+  .packageCard {
+    background-color: white;
+    color: black;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    max-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .packageCard img {
+    width: 100%;
+    height: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .packageCardContent {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .packageTitleCard {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .packageSubtitle {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+    /* text-align: center; */
+  }
+  
+  .packagePrice {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.8rem;
+  }
+  
+  .packageDescription {
+    flex-grow: 1;
+    font-size: 0.85rem;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .knowMoreBtn {
+    align-self: center;
+    margin: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .knowMoreBtn:hover {
+    /* background-color: gray; */
+    transform: translateY(-2px);
+  }
+  

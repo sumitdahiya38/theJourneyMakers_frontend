@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromo - Unforgettable Mount Bromo Sunrise Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contactUs.css">
+</head>
+<script src="script.js" defer></script>
+<body>
+    <div class="firstSection" id="home">
+        <div class="headerBar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Company Logo"/>
+                </a>
+            </div>
+            <button class="menuToggle" onclick="toggleSidebar()">
+                <img src="svg/menu.svg" alt="meu" width="auto" height="auto">
+            </button>
+            <nav  class="nav-pills">
+                <a href="index.html#home" class="nav-item">Home</a>
+                <a href="index.html#tourDetails" class="nav-item">Tour Details</a>
+                <a href="index.html#packages" class="nav-item">Packages</a>
+                <a href="#" class="nav-item">Testimonials</a>
+                <a href="#" class="nav-item active">Contact Us</a>
+            </nav>
+            <div class="bookNowBtnContainer">
+                <button onclick="openWhatsApp()" class="book-now-btn">
+                    Book Now
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <aside class="sidebar" id="sidebar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#tourDetails">Tour Details</a>
+            <a href="index.html#packages">Packages</a>
+            <a href="contactUs.html">Contact Us</a>
+          </aside>
+        <div class="formSection">
+            <div class="infoSection">
+                <div class="infoSectionHeading">
+                    Contact Us
+                </div>
+                <div class="infoAddress">
+                    <h3>Our mailing address is:</h3>
+                    <p>404 J- Block,
+                    <p>Kolar Road</p>
+                    <p>Lalita Nagar</p>
+                    <p>Bhopal, Pin - 460242</p>
+                    <p>Phone: +91 - 9675711458</p>
+                </div>
+                <div class="infoIconBar">
+                    <a href="https://www.fb.com">
+                        <img src="svg/fbLogo.svg" alt="fb Logo" width="auto" height="auto">
+                    </a>
+                    <a href="https://www.x.com">
+                        <img src="svg/xLogo.svg" alt="x Logo" width="auto" height="auto">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img src="svg/instaLogo.svg" alt="instagram Logo" width="auto" height="auto">
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <img src="svg/telegramLogo.svg" alt="telegram Logo" width="auto" height="auto">
+                    </a>
+                </div>
+            </div>
+            <div class="contactForm">
+                <p>Have questions or need help planning your trip?</p>
+                <p>We're here to make your travel seamless and memorable!</p>
+                <input type="text" placeholder="Enter your Name" class="customInput">
+                <input type="email" placeholder="Enter a valid email address" class="customInput">
+                <input type="tel" placeholder="Enter a valid phone number" class="customInput">
+                <textarea class="customTextarea" placeholder="Enter your message" rows="5" cols="40"></textarea>
+                <div class="contactUsButtonContainer">
+                    <button class="contactFormBtn">submit</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+          document.getElementById("sidebar").classList.toggle("active");
+        }
+      </script>
+</body>
+</html>
