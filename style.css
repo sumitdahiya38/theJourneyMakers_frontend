@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -17,7 +17,7 @@ body {
 
 .firstSection {
     /* min-height: 100vh; */
-    background-image: url('./images/backgroundCover.png');
+    background-image: url('./images/backgroundCover.webp');
     background-size: cover;      /* Scales image to cover entire section */
     background-position: center;
     background-repeat: no-repeat;
@@ -25,6 +25,7 @@ body {
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
+    /* background-attachment: scroll; */
 }
 
 .headerBar {

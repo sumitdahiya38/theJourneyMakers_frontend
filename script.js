@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
   
   // ====== WhatsApp Redirect ======
   function openWhatsApp() {
