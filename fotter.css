@@ -162,6 +162,14 @@
     line-height: 1.4;
 }
 
+.bottomHalfRight a:active {
+    color: #848484;
+}
+
+.bottomHalfRight a:visited {
+    color: #848484;
+}
+
 @media (min-width: 601px) and (max-width: 1023px) {
     .footerBottomHalf {
         flex-direction: column;
