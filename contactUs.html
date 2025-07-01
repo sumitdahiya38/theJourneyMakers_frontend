@@ -82,7 +82,7 @@
                 <input name="phone" type="tel" placeholder="Enter a valid phone number" class="customInput">
                 <textarea name="message" class="customTextarea" placeholder="Enter your message" rows="5" cols="40"></textarea>
                 <div class="contactUsButtonContainer">
-                    <button type="button" class="contactFormBtn" onclick="sendFormToSheet()">submit</button>
+                    <button type="submit" class="contactFormBtn">submit</button>
                 </div>
             </form>
             
@@ -158,6 +158,35 @@
         function toggleSidebar() {
           document.getElementById("sidebar").classList.toggle("active");
         }
+
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const encodedData = new URLSearchParams(formData);
+
+            try {
+            const response = await fetch('YOUR_WEB_APP_URL', {
+                method: 'POST',
+                body: encodedData
+            });
+
+            const result = await response.text();
+            console.log("Server response:", result);
+
+            if (result.includes("Success")) {
+                alert("Form submitted successfully!");
+                form.reset();
+            } else {
+                alert("Failed to submit form. Server said: " + result);
+            }
+
+            } catch (error) {
+            console.error("Error:", error);
+            alert("Error submitting form. Check the console for details.");
+            }
+        });
       </script>
 </body>
 </html>
