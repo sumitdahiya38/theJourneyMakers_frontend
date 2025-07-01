@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondSection.css">
     <link rel="stylesheet" href="packageSection.css">
+    <link rel="stylesheet" href="testimonial.css">
+    <link rel="stylesheet" href="fotter.css">
 </head>
 <script src="script.js" defer></script>
 <script src="scriptSecondSection.js" defer></script>
@@ -22,20 +24,32 @@
                     <img src="images/logo.webp" alt="Company Logo"/>
                 </a>
             </div>
-            <nav  class="nav-pills">
+            <button class="menuToggle" onclick="toggleSidebar()">
+                <img src="svg/menuWhite.svg" alt="meu" width="auto" height="auto">
+            </button>
+            <nav  class="navPills">
                 <a href="#home" class="nav-item active">Home</a>
                 <a href="#tourDetails" class="nav-item">Tour Details</a>
                 <a href="#packages" class="nav-item">Packages</a>
-                <a href="#testimonials" class="nav-item">Testimonials</a>
+                <a href="#testimonial" class="nav-item">Testimonials</a>
                 <a href="contactUs.html" class="nav-item">Contact Us</a>
             </nav>
-            <button onclick="openWhatsApp()" class="book-now-btn">
-                Book Now
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-            </button>
+            <div class="bookNowBtnContainer">
+                <button onclick="openWhatsApp()" class="book-now-btn">
+                    Book Now
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </button>
+            </div>
         </div>
+        <aside class="sideBar" id="sidebar">
+            <a href="index.html#home" onclick="toggleSidebar()">Home</a>
+            <a href="index.html#tourDetails" onclick="toggleSidebar()">Tour Details</a>
+            <a href="index.html#packages" onclick="toggleSidebar()">Packages</a>
+            <a href="index.html#testimonial" onclick="toggleSidebar()">Testimonials</a>
+            <a href="contactUs.html" onclick="toggleSidebar()">Contact Us</a>
+          </aside>
         <div class="tagline">
             <p>Experience the Magic of India</p>
         </div>
@@ -113,8 +127,6 @@
         </div>
         <div class="secondSectionCarouselContainer">
             <!-- <button class="carouselButton left" id="prev">&#10094;</button> -->
-            <div class="carouselTrackContainer">
-                <div class="carouselTrack">
                     <div class="secondSectionCard">
                         <img src="images/mountainsnmonasteries.webp" alt="Image 1" />
                         <div class="textSecondSectionCard">
@@ -150,8 +162,6 @@
                             <p>Ooty offers tea gardens and tranquil hilltop views.</p>
                         </div>
                     </div>
-                  </div>
-            </div>
             <!-- <button class="carouselButton right" id="next">&#10095;</button> -->
         </div>
     </div>
@@ -175,7 +185,7 @@
                 <p class="packageDescription">
                     Discover the charm of Ooty with scenic train rides, tea gardens, and tranquil hilltop views.
                 </p>
-                <button class="knowMoreBtn">Book Now</button>
+                <button onclick="openWhatsApp('ooty')" class="knowMoreBtn">Book Now</button>
               </div>
             </div>
           
@@ -188,7 +198,7 @@
                 <p class="packageDescription">
                     Experience the beauty of Sikkim with snow-capped mountains, peaceful monasteries, and vibrant local culture.
                 </p>
-                <button class="knowMoreBtn">Book Now</button>
+                <button onclick="openWhatsApp('sikkim')" class="knowMoreBtn">Book Now</button>
               </div>
             </div>
           
@@ -201,7 +211,7 @@
                 <p class="packageDescription">
                     Explore the serene backwaters, lush greenery, and cultural richness of Kerala in a refreshing escape.
                 </p>
-                <button class="knowMoreBtn">Book Now</button>
+                <button onclick="openWhatsApp('kerala')" class="knowMoreBtn">Book Now</button>
               </div>
             </div>
 
@@ -214,10 +224,234 @@
                   <p class="packageDescription">
                     Discover the pristine beaches, crystal-clear waters, and vibrant marine life of Andaman and Nicobar Islands.
                   </p>
-                  <button class="knowMoreBtn">Book Now</button>
+                  <button onclick="openWhatsApp('andaman')" class="knowMoreBtn">Book Now</button>
                 </div>
               </div>
           </div>
     </div>
+    <div class="testimonialSection" id="testimonial">
+        <div class="testimonialTitleSection">
+            <div class="testimonialStarCircle">
+                <img src="images/sparkle.webp" alt="Sparkle Icon">
+            </div>
+            <div class="testimonialTitle"><p>Testimonials</p></div>
+        </div>
+        <div class="testimonialSectionHeading">
+            <h2 class="testimonialSectionText">Hear from Our Happy Travelers Real <span>Stories </span>Real <span>Adventures.</span></h2>
+        </div>
+        <div class="reviewCardSection">
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewCard">
+                <div class="cardTextSection">
+                    <h2>A Journey Like No Other</h2>
+                    <p>I traveled to many places, but the sunrise at Mount Bromo was unlike anything I've ever seen. The guide was knowledgeable and friendly, and the entire trip was seamlessly organized. Highly recommended!</p>
+                </div>
+                <div class="cardUserContainer">
+                    <img src="images/reviewimg1.webp" alt="Tour Package Image">
+                    <div class="cardUserText">
+                        <h3>Dennis Callis</h3>
+                        <p>Aug 29, 2024</p>
+                        <div class="reviewCardStarContainer">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                            <img src="svg/star.svg" alt="fb Logo" width="auto" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fotterSection">
+        <div class="fotterHeading">
+            <h1>Book Your Tour Today!</h1>
+            <p>Join us for an unforgettable adventure</p>
+        </div>
+        <div class="lineBreak"></div>
+        <div class="footerBottomHalf">
+            <div class="bottomLeftHalf">
+                <div class="logoFooter">
+                    <a href="index.html">
+                        <img src="images/logo.webp" alt="Company Logo"/>
+                    </a>
+                </div>
+                <div class="footerDesc">
+                    <p>Discover the awe-inspiring beauty of Indian landscapes with Journey Makers. Witness the breathtaking sunrise from the summit, embark on thrilling adventures, and immerse yourself in the rich local culture.
+                    </p>
+                    <div class="contactUsDiv">
+                        <a href="contactUs.html">Contact Us
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                          </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footerIconsSectionWithCopyright">
+                    <div class="footerInfoIconBar">
+                        <a href="https://www.fb.com">
+                            <img src="svg/fbWhite.svg" alt="fb Logo" width="auto" height="auto">
+                        </a>
+                        <a href="https://www.x.com">
+                            <img src="svg/xLogoWhite.svg" alt="x Logo" width="auto" height="auto">
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <img src="svg/instaLogoW.svg" alt="instagram Logo" width="auto" height="auto">
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <img src="svg/telegramW.svg" alt="telegram Logo" width="auto" height="auto">
+                        </a>
+                    </div>
+                    <div class="copyrightContent">
+                        <p>
+                            © 2025 Journey Makers Tours.
+                        All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomHalfRight">
+                <div class="navItemsFooter">
+                    <a href="#home">Home</a>
+                    <a href="#tourDetails">Tour Details</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#testimonial">Testimonials</a>
+                </div>
+                <div class="footerContactUsSection">
+                    <h2>Contact Us</h2>
+                    <h3>Our mailing address is:</h3>
+                    <p>404 J- Block,
+                    <p>Kolar Road</p>
+                    <p>Lalita Nagar</p>
+                    <p>Bhopal, Pin - 460242</p>
+                    <p>Phone: +91 - 9675711458</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+          document.getElementById("sidebar").classList.toggle("active");
+        }
+      </script>
 </body>
 </html>

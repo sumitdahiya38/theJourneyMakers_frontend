@@ -36,10 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   
   // ====== WhatsApp Redirect ======
-  function openWhatsApp() {
+  function openWhatsApp(packageType) {
+    let message = "Hi! I want to know more about the tours!";
+    switch(packageType) {
+      case 'ooty' :
+        message = 'Hi! I want to know more about Ooty tour';
+        break;
+      case 'sikkim':
+        message = 'Hi! I want to know more about Sikkim tour';
+        break;
+      case 'kerala':
+        message = 'Hi! I want to know more about Kerala tour';
+        break;
+      case 'andaman':
+        message = 'Hi! I want to know more about Andaman tour';
+    }
     const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-    const number = "918901528108";
-    const message = "Hi, I want to know more about the tour!";
+    const number = "919675711458";
     const encodedMessage = encodeURIComponent(message);
   
     if (isMobile) {

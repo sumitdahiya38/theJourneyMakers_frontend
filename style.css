@@ -16,7 +16,6 @@ body {
 }
 
 .firstSection {
-    /* min-height: 100vh; */
     background-image: url('./images/backgroundCover.webp');
     background-size: cover;      /* Scales image to cover entire section */
     background-position: center;
@@ -25,7 +24,6 @@ body {
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
-    /* background-attachment: scroll; */
 }
 
 .headerBar {
@@ -34,23 +32,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3% 2rem 3%;
-    /* background-color: green; */
 }
 
 .logo img {
-    min-width: 80px;
     max-width: 120px; /* or any size that fits your design */
     height: auto;
 }
 
-/* .logo h1 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    font-style: italic;
-} */
-
-.nav-pills {
+.navPills {
     display: flex;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -76,7 +65,7 @@ body {
     color: black;
 }
 
-.nav-pills:hover .nav-item.active:not(:hover) {
+.navPills:hover .nav-item.active:not(:hover) {
     background-color: transparent;
     color: white;
 }
@@ -96,12 +85,38 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* margin-left: 10%; */
 }
 
 .book-now-btn:hover {
     transform: translate(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background: #444;
+    color: white;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sideBar.active {
+    left: 0;
+  }
+  
+  .sideBar a {
+    display: block;
+    padding: 1rem 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+  }
 
 .tagline {
     position: relative;
@@ -150,26 +165,18 @@ body {
 .contentSection {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    /* gap: 2rem; */
-    padding-left: 4rem;
+    align-items: center;
+    justify-content: center;
     color: white;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    margin-right: 2rem;
-    /* max-width: 350px; */
 }
 
 .tourInfo {
-    /* margin-top: 3rem; */
     position: relative;
     top: 4rem;
     left: 3%;
-    bottom: 3rem;
-    min-width: 340px;
-    max-width: 350px;
-    /* bottom: 3rem; */
+    width: 30%;
+    max-width: 320px;
+    margin-bottom: 4rem;
 }
 
 .tourInfo h2 {
@@ -240,7 +247,7 @@ body {
     font-size: 1rem;
 }
 
-.tourDesc{
+.tourInfo p{
     font-weight: 300;
     font-size: .9 rem;
     margin-bottom: 1rem;
@@ -249,7 +256,7 @@ body {
 }
 
 .bookSmallBtn {
-    display: inline-flex;
+    /* display: flex; */
     align-items: center;
     gap: 0.5rem;
     background: white;
@@ -259,10 +266,11 @@ body {
     border-radius: 50px;
     font-weight: 400;
     font-size: 1rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
+    /* margin-bottom: 3rem; */
 }
 
 .bookSmallBtn:hover {
@@ -273,9 +281,10 @@ body {
 .carouselContainer {
     display: flex;
     position: relative;
-    gap: .8rem;
-    margin-left: 12%;
-    /* align-items: flex-end; */
+    gap: .5rem;
+    margin-left: 15%;
+    margin-right: 1rem;
+    padding-right: 1rem;
     top: 5.5rem;
     scroll-snap-type: x mandatory;
 }
@@ -285,10 +294,10 @@ body {
     position: relative;
     justify-content: space-between;
     transition: all 0.4s ease-in-out;
-    width: 10rem;
-    /* margin-right: 1rem; */
+    width: 25%;
     z-index: 1;
     flex-shrink: 0; /* prevents shrinking */
+    max-width: 150px;
 }
 
 .card img {
@@ -332,4 +341,167 @@ body {
     color: white;
     margin-top: 5px;
     text-align: left;
+}
+
+@media (min-width: 1025px) {
+    .logo{
+        margin-right: 6%;
+    }
+
+    .bookNowBtnContainer {
+        margin-left: 6%;
+    }
+
+    .headerBar {
+        justify-content: space-between;
+    }
+
+    .sidebar {
+      display: none;
+    }
+  
+    .menuToggle {
+      display: none;
+    }
+
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .headerBar {
+        justify-content:space-between;
+        margin-left: 0;
+    }
+
+    .logo {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .bookNowBtnContainer {
+        display: none;
+    }
+
+    .navPills {
+        display: none;
+    }
+
+    .menuToggle {
+        display: block;
+        height: 40px;
+        width: 40px;
+        border: none;
+        background-color: transparent;
+        margin-right: 5%;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .mainTitle {
+        font-size: 2.8rem;
+        font-weight: 300;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+    
+    .subTitle {
+        margin-top: .5rem;
+        font-size: 2.3rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .carouselContainer {
+        display: none;
+    }
+
+    .tourInfo {
+        position: relative;
+        top: 2rem;
+        width: 70%;
+        max-width: 500px;
+        margin-bottom: 4rem;
+    }
+    
+    .tourInfo h2 {
+        font-weight: 450;
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 600px) {
+    .headerBar {
+        justify-content:space-between;
+        width: 100%;
+    }
+
+    .bookNowBtnContainer {
+        display: none;
+    }
+
+    .carouselContainer {
+        display: none;
+    }
+
+    .menuToggle {
+        height: 40px;
+        width: 40px;
+        color: black;
+        display: block;
+        border: none;
+        background-color: transparent;
+    }
+    
+    .sidebar {
+        display: block;
+    }
+
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .navPills {
+        display: none;
+    }
+    
+    .mainTitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+    
+    .subTitle {
+        margin-top: .5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .tourInfo {
+        position: relative;
+        top: 2rem;
+        width: 70%;
+        max-width: 380px;
+        margin-bottom: 4rem;
+    }
+    
+    .tourInfo h2 {
+        font-weight: 450;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .tourInfo p {
+        font-size: .8rem;
+    }
 }
