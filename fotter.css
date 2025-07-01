@@ -152,6 +152,11 @@
 }
 
 @media (min-width: 601px) and (max-width: 1023px) {
+    .fotterSection {
+        border-radius: 0px;
+        margin-bottom: 0rem;
+    }
+
     .footerBottomHalf {
         flex-direction: column;
         justify-content: flex-start;
@@ -172,6 +177,10 @@
 
     .contactUsDiv {
         margin-bottom: 0rem;
+    }
+
+    .bottomHalfRight {
+        display: none;
     }
 }
 
@@ -228,8 +237,7 @@
         font-size: .8rem;
     }
 
-    .navItemsFooter {
-        font-size: .9rem;
-        gap: .8rem;
+    .bottomHalfRight {
+        display: none;
     }
 }
