@@ -82,6 +82,14 @@
     font-weight: 300;
 }
 
+.contactUsDiv a:active {
+    color: #848484;
+}
+
+.contactUsDiv a:visited {
+    color: #848484;
+}
+
 .footerIconsSectionWithCopyright {
     display: flex;
     flex-direction: row;
