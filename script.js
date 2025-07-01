@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const firstSection = document.querySelector(".firstSection");
 
+  const id = 'AKfycbxvn0J86tJU6Qmb_8hNENyEwqJpgQOKQtV7v29S5FuFZH3wpW5imTtMKJ2P3d8UlfAX0A';
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -62,3 +64,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
+
+  window.sendFormToSheet =  async function() {
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+  
+    try {
+      const response = await fetch(`https://script.google.com/macros/s/${id}/exec`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      await response.json();
+      alert('Form Submitted successfully!');
+    } catch (error) {
+      alert('Error submitting Form.');
+      console.error(error);
+    }
+  }
