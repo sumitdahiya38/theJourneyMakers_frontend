@@ -167,11 +167,11 @@
   }
   
   .packageTitleCard {
-    font-size: .65rem;
+    font-size: .85rem;
   }
   
   .packageSubtitle {
-    font-size: .55rem;
+    font-size: .7rem;
   }
   
   .packagePrice {
@@ -179,13 +179,13 @@
   }
   
   .packageDescription {
-    font-size: 0.45rem;
-    margin-bottom: .5rem;
-    min-height: 50px;
+    font-size: 0.55rem;
+    /* margin-bottom: .5rem; */
+    min-height: 70px;
   }
   
   .knowMoreBtn {
-    padding: .7rem 1rem;
+    padding: .7rem .8rem;
     font-size: .5rem;
     margin-top: .1rem;
   }
