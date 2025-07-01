@@ -65,26 +65,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 
-  window.sendFormToSheet =  async function() {
-    const id = 'AKfycbxZCQOv9CNr-RutFJsEx9VvOx1dJM0K4_nI-uGzxulIqzxOYDR-LSDyifL_-5mtlPBaLg';
+  window.sendFormToSheet = async function () {
     const form = document.getElementById('contactForm');
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const encodedData = new URLSearchParams(formData);
   
     try {
-      const response = await fetch(`https://script.google.com/macros/s/${id}/exec`, {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbz87bkRZvJuWCCnIKKSEADqhTmalW3UW2OZl1h-Mjv4BlYZa8kYDAlG6Tv2Kck87TarEA/exec', {
         method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        }
+        body: encodedData
       });
   
-      await response.json();
-      alert('Form Submitted successfully!');
-    } catch (error) {
-      alert('Error submitting Form.');
-      console.error(error);
+      const text = await response.text();
+      alert('Submitted successfully');
+      console.log('Response:', text);
+    } catch (err) {
+      alert('Error submitting form');
+      console.error(err);
     }
-  }
+  };
