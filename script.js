@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const firstSection = document.querySelector(".firstSection");
 
+  const id = 'AKfycbxvn0J86tJU6Qmb_8hNENyEwqJpgQOKQtV7v29S5FuFZH3wpW5imTtMKJ2P3d8UlfAX0A';
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   window.sendFormToSheet =  async function() {
-    const id = 'AKfycbxvn0J86tJU6Qmb_8hNENyEwqJpgQOKQtV7v29S5FuFZH3wpW5imTtMKJ2P3d8UlfAX0A';
+    const id = 'AKfycbxZCQOv9CNr-RutFJsEx9VvOx1dJM0K4_nI-uGzxulIqzxOYDR-LSDyifL_-5mtlPBaLg';
     const form = document.getElementById('contactForm');
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
@@ -74,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         }
       });
   
