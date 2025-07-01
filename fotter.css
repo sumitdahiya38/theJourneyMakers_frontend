@@ -17,6 +17,7 @@
 
 .fotterSection a{
     text-decoration: none;
+    color: #848484;
 }
 
 .fotterSection a:visited {
@@ -82,14 +83,6 @@
     font-weight: 300;
 }
 
-.contactUsDiv a:active {
-    color: #848484;
-}
-
-.contactUsDiv a:visited {
-    color: #848484;
-}
-
 .footerIconsSectionWithCopyright {
     display: flex;
     flex-direction: row;
@@ -127,18 +120,6 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 1.5rem;
-}
-
-.navItemsFooter a{
-    text-decoration: none;
-}
-
-.navItemsFooter a:active{
-    color: #848484;
-}
-
-.navItemsFooter a:visited{
-    color: #848484;
 }
 
 .footerContactUsSection {
