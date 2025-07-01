@@ -69,7 +69,6 @@
 }
 
 .packageCardsContainer {
-    /* background-color: #d3d8da; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -148,3 +147,97 @@
     transform: translateY(-2px);
   }
   
+@media (max-width: 600px) {
+  .packageSectionHeading h2 {
+    font-size: 1.5rem;
+  }
+
+  .packageCard {
+    max-width: 140px;
+  }
+  
+  .packageCard img {
+    height: 120px;
+    height: 120px;
+  }
+  
+  .packageCardContent {
+    padding-bottom: 0rem;
+    padding-top: .5rem;
+  }
+  
+  .packageTitleCard {
+    font-size: .65rem;
+  }
+  
+  .packageSubtitle {
+    font-size: .55rem;
+  }
+  
+  .packagePrice {
+    margin-bottom: 0.45rem;
+  }
+  
+  .packageDescription {
+    font-size: 0.45rem;
+    margin-bottom: .5rem;
+    min-height: 50px;
+  }
+  
+  .knowMoreBtn {
+    padding: .7rem 1rem;
+    font-size: .5rem;
+    margin-top: .1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) { 
+  .packageCardsContainer {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .packageSectionHeading h2 {
+    font-size: 1.5rem;
+  }
+
+  .packageCard {
+    max-width: 40%;
+    /* min-width: 45%; */
+  }
+  
+  .packageCard img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .packageCardContent {
+    padding-bottom: 0rem;
+  }
+  
+  .packageTitleCard {
+    font-size: 1.2rem;
+  }
+  
+  .packageSubtitle {
+    font-size: .9rem;
+  }
+  
+  .packagePrice {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.9rem;
+  }
+  
+  .packageDescription {
+    font-size: 0.8rem;
+    margin-bottom: .5rem;
+    min-height: 70px;
+  }
+  
+  .knowMoreBtn {
+    padding: .9rem 1.2rem;
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+}
