@@ -383,6 +383,10 @@ body {
         width: 80%;
     }
 
+    .contactFormBtn {
+        background-color: #dfbf86;
+    }
+
     .customInput {
         width: 80%;
     }

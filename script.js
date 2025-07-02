@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         message = 'Hi! I want to know more about Andaman tour';
     }
     const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-    const number = "919675711458";
+    const number = "919303055905";
     const encodedMessage = encodeURIComponent(message);
   
     if (isMobile) {
